@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import DoctorProfile from './components/DoctorProfile';
+import Services from './components/Services';
+import WhyChoose from './components/WhyChoose';
+import Reviews from './components/Reviews';
+import Booking from './components/Booking';
+import Gallery from './components/Gallery';
+import Location from './components/Location';
+import Footer from './components/Footer';
+import FloatingButtons from './components/FloatingButtons';
+import { useScrollAnimation } from './hooks/useScrollAnimation';
 import './App.css';
 
 function App() {
+  useScrollAnimation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <DoctorProfile />
+        <Services />
+        <WhyChoose />
+        <Reviews />
+        <Booking />
+        <Gallery />
+        <Location />
+      </main>
+      <Footer />
+      <FloatingButtons />
     </div>
   );
 }
